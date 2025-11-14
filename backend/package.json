@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "https://github.com/davidProfe-git/Blog-prog1#readme",
+  "bugs": {
+    "url": "https://github.com/davidProfe-git/Blog-prog1/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidProfe-git/Blog-prog1.git"
+  },
+  "license": "ISC",
+  "author": "david <david.rugeles@pi.edu.co>",
+  "type": "commonjs",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
