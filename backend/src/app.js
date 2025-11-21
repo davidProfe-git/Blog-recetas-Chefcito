@@ -4,7 +4,7 @@ const port = 4000
 
 let estudiante = ["laura","miguel"]
 
-app.get('/pureba', (req, res) => {
+app.get('/prueba', (req, res) => {
     res.json({mensaje: "hola clase prog 1"})
 })
 
