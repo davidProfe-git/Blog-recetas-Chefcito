@@ -1,0 +1,181 @@
+:root{
+    --main-c:#FFC300;
+    --black-c: #000;
+}
+
+/*estilos generales*/
+
+html{
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: inherit;
+}
+
+li{
+    list-style: none;
+}
+
+p{
+    font-size: 1.1rem;
+}
+
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h4{
+    font-size: 1.6rem;
+}
+h5{
+    font-size: 1.4rem;
+}
+h6{
+    font-size: 1.2rem;
+}
+
+/*header de la pagina*/
+
+header.main-header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.header-wrap{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: transparent;
+    z-index: 999;
+}
+.wrap-logo-header{
+    display: flex;
+    align-items: center;
+    flex-basis: 15%;
+}
+.logo-header{
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/*menu header*/
+
+.nav-header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.nav-wrap-header{
+    display: flex;
+    flex-basis: 50%;
+}
+
+ul.main-menu{
+    display: flex;
+    width: 100;
+    z-index: 99;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    font-size: 1.1rem;
+}
+
+ul.main-menu #nav-main-contact{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--main-c);
+    color: #fff;
+}
+li.menu-item{
+    margin: 0.75rem;
+    display: flex;
+}
+li.menu-item a{
+    padding: 0.5rem 1rem;
+    /* color: #fff; */
+}
+li.menu-item a:hover{
+    color: var(--main-c);
+}
+
+i.toggle-menu img{
+    width: 27px;
+    z-index: 99;
+}
+
+i.toggle-menu{
+    display: none; 
+    background-color: #fff;
+    border: none;
+    z-index: 9999;
+}
+
+input#check{
+    display: none; 
+}
+
+@media (main-width:880px){
+    .header-wrap{
+        padding: 0.5rem 5rem;
+    }
+}
+
+@media (max-width:768px){
+    header.main-header{
+        margin-bottom: 4rem;
+    }
+    .header-wrap{
+        position: fixed;
+        width: 100%;
+        background-color: #fff;
+        padding: 0;
+        top: 0;
+        z-index: 9999;
+        height: 60px;
+    }
+    .wrap-logo-header{
+        position: fixed;
+        z-index:999;
+        top: 3%;
+        left: 3%;
+    }
+    .logo-header, li.menu-item a{
+        color: #222;      
+    }
+    i.toggle-menu{
+        display: flex;
+    }
+    ul.main-menu,#nav-main-contact{
+        display: none;
+        left: 0;
+        margin: 0;
+        padding: 0;
+    }
+    ul.main-menu{
+        position: fixed;
+        background-color: #fff;
+    }
+    label.checkbtn{
+        position: fixed;
+        right: 3%;
+        top: 3%;
+        z-index: 9999;
+    }
+}
