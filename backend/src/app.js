@@ -1,12 +1,14 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 4000
 
-app.get('/', (req, res) => {
-  res.json('Hello World!')
+let estudiante = ["laura","miguel"]
+
+app.get('/prueba', (req, res) => {
+    res.json({mensaje: "hola clase prog 1"})
 })
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
 
