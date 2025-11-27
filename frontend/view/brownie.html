@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brownie</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: { extend: { colors: { primary:"#F59E0B","background-dark":"#0f141a","surface-dark":"#161c23" } } }
+    }
+  </script>
+  <style> body{font-family:Poppins,system-ui,sans-serif} </style>
+</head>
+<body class="bg-background-dark text-white">
+  <header class="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <nav aria-label="Breadcrumb" class="text-sm text-white/70">
+      <ol class="flex flex-wrap items-center gap-2">
+        <li><a class="hover:underline" href="home.html">Inicio</a></li>
+        <li aria-hidden="true">/</li>
+        <li><span aria-current="page" class="text-white">Brownie</span></li>
+      </ol>
+    </nav>
+  </header>
+
+  <main class="container mx-auto px-4 sm:px-6 lg:px-8 pb-16">
+    <section class="rounded-2xl overflow-hidden bg-surface-dark border border-white/10 shadow-xl">
+      <figure class="relative">
+        <img src="https://recetasdecocina.elmundo.es/wp-content/uploads/2016/11/brownie-de-chocolate.jpg"
+" alt="Brownie de chocolate recién horneado"
+             class="w-full h-[320px] sm:h-[420px] object-cover" width="1600" height="900" loading="eager" />
+        <figcaption class="absolute bottom-3 right-4 px-3 py-1 rounded-full bg-black/40 text-white text-xs backdrop-blur">Foto de referencia</figcaption>
+      </figure>
+
+      <div class="p-6 sm:p-8">
+        <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Brownie</h1>
+
+        <div class="mt-3 mb-6 flex flex-wrap items-center gap-3 text-sm text-white/80">
+          <span class="inline-flex items-center gap-1"><span class="material-icons text-base">schedule</span> 30–35 min</span>
+          <span class="opacity-40">•</span>
+          <span class="inline-flex items-center gap-1"><span class="material-icons text-base">restaurant</span> 8–10 porciones</span>
+          <span class="opacity-40">•</span>
+          <span class="inline-flex items-center gap-1"><span class="material-icons text-base">local_fire_department</span> Fácil</span>
+        </div>
+
+        <article class="prose prose-invert prose-slate prose-lg sm:prose-xl max-w-none">
+          <p>Brownie clásico, húmedo y chocolateado, perfecto para compartir o acompañar con helado.</p>
+
+          <h2>Ingredientes</h2>
+          <ul>
+            <li>200 g chocolate negro</li>
+            <li>120 g mantequilla</li>
+            <li>180 g azúcar</li>
+            <li>3 huevos</li>
+            <li>90 g harina de trigo</li>
+            <li>30 g cacao en polvo</li>
+            <li>1 pizca de sal</li>
+            <li>100 g nueces troceadas (opcional)</li>
+          </ul>
+
+          <h2>Preparación</h2>
+          <ol>
+            <li>Derrite el chocolate con la mantequilla al baño maría o en microondas.</li>
+            <li>Añade azúcar y mezcla bien; incorpora los huevos uno a uno.</li>
+            <li>Agrega harina, cacao y sal; mezcla hasta integrar.</li>
+            <li>Agrega las nueces si deseas y vierte la mezcla en un molde engrasado.</li>
+            <li>Hornea a 180°C durante 20–25 min; deja enfriar antes de cortar.</li>
+          </ol>
+
+          <details class="mt-6 rounded-xl border border-white/10 p-4 bg-black/20">
+            <summary class="cursor-pointer font-semibold">Notas del chef</summary>
+            <ul class="mt-3">
+              <li>No hornees de más: el interior debe quedar jugoso.</li>
+              <li>Puedes variar con chocolate blanco, frutos secos o chips.</li>
+              <li>Ideal para acompañar con una bola de helado de vainilla.</li>
+            </ul>
+          </details>
+
+          <h3>Información nutricional (aprox. por porción)</h3>
+          <ul>
+            <li>Calorías: 320</li>
+            <li>Carbohidratos: 37 g — Proteína: 5 g — Grasas: 18 g</li>
+            <li>Alérgenos: huevo, gluten, frutos secos (si aplica)</li>
+          </ul>
+        </article>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="paella.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-white/15 hover:bg-white/10 transition">← Anterior: Paella</a>
+          <a href="home.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-md bg-primary text-black font-semibold hover:brightness-110 transition"><span class="material-icons text-base">home</span> Volver al listado</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
