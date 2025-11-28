@@ -8,5 +8,6 @@ const coneccion = mysql.createPool({
     database: process.env.DB_NAME
     
 }) 
+const conection
 
-module.exports = conectionDB
+module.exports = conectionDataBase
