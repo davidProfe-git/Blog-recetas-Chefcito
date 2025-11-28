@@ -1,11 +1,11 @@
 const express = require('express')
 const app = express()
-const port = 4000
+const port = 3000
 
 let estudiante = ["laura","miguel"]
 
 app.get('/prueba', (req, res) => {
-    res.json({mensaje: "hola clase prog 1"})
+    res.json({mensaje: "funciona mi api"})
 })
 
 app.listen(port, () => {

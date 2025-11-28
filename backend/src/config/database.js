@@ -7,4 +7,6 @@ const coneccion = mysql.createPool({
     password: process.env.PASSWORD 
     database: process.env.DB_NAME
     
-})
+}) 
+
+module.exports = conectionDB
