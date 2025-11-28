@@ -1,0 +1,10 @@
+const DB = require ('../config/database.js');
+
+class RecetaModel {
+    //listar recetas de mi base de datos
+    static async getRecetas() {
+
+
+
+
+}
