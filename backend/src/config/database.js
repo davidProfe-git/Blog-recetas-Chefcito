@@ -4,8 +4,7 @@ require('dotenv').config()
 const coneccionDB = mysql.createPool({
     host: process.env.HOST,
     user: process.env.USER,
-    password: process.env.PASSWORD,
-    port: process.env.PORT_DB, //este solo lo pone el profe
+    password: process.env.PASSWORD, 
     database: process.env.DB_NAME
 })
 
