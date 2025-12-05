@@ -5,8 +5,8 @@ const coneccionDB = mysql.createPool({
     host: process.env.HOST,
     user: process.env.USER,
     password: process.env.PASSWORD,
-    database: process.env.DB_NAME,
-    port: process.env.PORT_DB //este solo lo pone el profe
+    port: process.env.PORT_DB, //este solo lo pone el profe
+    database: process.env.DB_NAME
 })
 
 const coneccion = coneccionDB.promise()
