@@ -93,6 +93,7 @@ ul.main-menu{
     margin: 0;
     padding: 0;
     justify-content: space-between;
+    align-items: center;
     font-size: 1.1rem;
 }
 
@@ -109,7 +110,7 @@ li.menu-item{
 }
 li.menu-item a{
     padding: 0.5rem 1rem;
-    /* color: #fff; */
+    color: #fff; 
 }
 li.menu-item a:hover{
     color: var(--main-c);
@@ -177,5 +178,38 @@ input#check{
         right: 3%;
         top: 3%;
         z-index: 9999;
+        cursor: pointer;
     }
+
+    #check:checked ~ ul{
+        display: flex;
+        z-index: 9;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh; /*para se muestre en toda la pantalla*/
+        top: 0%;
+        font-size: 2rem;
+    }
+}
+
+/*añadir imagen de fonto con texto sobrepuesto*/
+.wrap-header-hero{
+    background: linear-gradient(to bottom, rgb(0 0 0 / 0.75), rgb(0 0 0 / 0.5)),url(https://png.pngtree.com/background/20230616/original/pngtree-mexican-food-and-tacos-piled-on-board-picture-image_3625823.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.hero-home-page{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrap-hero-home-page{
+    color: #fff;
+    text-align: center;
+    width: 50%;
+
 }
