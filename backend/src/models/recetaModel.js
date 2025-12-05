@@ -1,6 +1,5 @@
 const DB = require('../config/database')
 
-
 class RecetaModel{
     //listar recetas de mi base de datos
     static async obtenerRecetas(){
