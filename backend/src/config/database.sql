@@ -1,8 +1,8 @@
 b
 -- Crear la base de datos
-CREATE DATABASE blog_recetas CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE ArizaDelicias CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-USE blog_recetas;
+USE ArizaDelicias;
 
 -- Crear la tabla de recetas
 CREATE TABLE recetas (
