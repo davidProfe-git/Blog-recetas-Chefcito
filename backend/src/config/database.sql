@@ -70,9 +70,3 @@ INSERT INTO recetas_con_estrella_michelin (nombre, descripcion, ingredientes, in
 ('Oysters and Pearls', 'A sabayon of pearl tapioca with Island Creek oysters and white sturgeon caviar.', 'Oysters; pearl tapioca; sturgeon caviar; egg yolks; butter; lemon; salt', 'Prepare sabayon, cook tapioca, assemble oysters with caviar on top.'),
 ('The Black Truffle Explosion', 'Single raviolo filled with hot black truffle liquid.', 'Pasta dough; black truffles; butter; veal stock; Parmesan; salt', 'Prepare ravioli, infuse liquid center with truffle oil, seal, cook briefly.'),
 ('Sound of the Sea', 'Sashimi and tapioca sand served with sea aroma elements.', 'Fresh sashimi; tapioca; herbs; seaweed; citrus', 'Assemble sashimi, prepare tapioca sand, plate with sea aroma elements.');
-
-
-
-
-
-
