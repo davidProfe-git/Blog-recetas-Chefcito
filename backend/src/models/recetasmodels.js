@@ -32,4 +32,4 @@ const recetasmodels = {
   }
 }
 
-module.exports = MisRecetasModel
+module.exports = recetasmodels

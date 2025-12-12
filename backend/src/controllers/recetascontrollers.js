@@ -36,4 +36,4 @@ class recetascontrollers {
     }
 }
 
-module.exports = RecetaController
+module.exports = recetascontrollers 
