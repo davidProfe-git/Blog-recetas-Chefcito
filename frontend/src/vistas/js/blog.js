@@ -15,9 +15,7 @@ fetch('http://localhost:4000/api/recetas/')
                     <p>${receta.ingredientes}</p>
                     <h5> ⏱️ ${receta.tiempo_preparacion} min </h5>
                 </div>
-                <div class="card-action">
-                    <a href="receta.html">ver receta</a>
-                </div>
+                
             </div>
         </div> `
  });
