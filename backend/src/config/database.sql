@@ -1,74 +1,22 @@
--- Archivo principal de inicialización de la base de datos
--- Crea la base de datos, la tabla y agrega recetas de ejemplo.
-
-CREATE DATABASE IF NOT EXISTS ArizaDelicias CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
-USE ArizaDelicias;
-
-CREATE TABLE IF NOT EXISTS recetas_con_estrella_michelin (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(255) NOT NULL,
-    descripcion TEXT,
-    ingredientes TEXT,
-    instrucciones TEXT,
-    estrella_michelin BOOLEAN DEFAULT TRUE,
-    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    UNIQUE KEY uniq_nombre (nombre(191))
-);
-
--- Inserciones de recetas de ejemplo (INSERT IGNORE evita duplicados por nombre)
-INSERT IGNORE INTO recetas_con_estrella_michelin (nombre, descripcion, ingredientes, instrucciones, estrella_michelin) VALUES
-('Oysters and Pearls', 'A sabayon of pearl tapioca with Island Creek oysters and white sturgeon caviar.', 'Oysters; pearl tapioca; sturgeon caviar; egg yolks; butter; lemon; salt', 'Prepare sabayon, cook tapioca, assemble oysters with caviar on top.', 1),
-('The Black Truffle Explosion', 'Single raviolo filled with hot black truffle liquid.', 'Pasta dough; black truffles; butter; veal stock; Parmesan; salt', 'Prepare ravioli, infuse liquid center with truffle oil, seal, cook briefly.', 1),
-('Sound of the Sea', 'Sashimi and tapioca sand served with sea aroma elements.', 'Fresh sashimi; tapioca; herbs; seaweed; citrus', 'Assemble sashimi, prepare tapioca sand, plate with sea aroma elements.', 1),
-('Risotto Cremoso con Esencia de Trufa', 'Creamy risotto flavored with truffle oil and Parmesan.', 'Arborio rice; chicken stock; white wine; butter; Parmesan; truffle oil', 'Make soffrito, toast rice, add stock gradually, finish with butter, cheese and truffle oil.', 0),
-('Ensalada de Vegetales Asados - Gargouillou', 'A vibrant roasted vegetable salad with herb vinaigrette.', 'Assorted vegetables; olive oil; herbs; vinegar; salt; pepper', 'Roast vegetables, toss with herb vinaigrette, serve warm or room temperature.', 0)
-;
--- Archivo principal de inicialización de la base de datos
--- Crea la base de datos, la tabla y agrega recetas de ejemplo.
-
-CREATE DATABASE IF NOT EXISTS ArizaDelicias CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
-USE ArizaDelicias;
-
-CREATE TABLE IF NOT EXISTS recetas_con_estrella_michelin (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(255) NOT NULL,
-    descripcion TEXT,
-    ingredientes TEXT,
-    instrucciones TEXT,
-    estrella_michelin BOOLEAN DEFAULT TRUE,
-    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-
--- Inserciones de recetas de ejemplo
-INSERT INTO recetas_con_estrella_michelin (nombre, descripcion, ingredientes, instrucciones, estrella_michelin) VALUES
-('Oysters and Pearls', 'A sabayon of pearl tapioca with Island Creek oysters and white sturgeon caviar.', 'Oysters; pearl tapioca; sturgeon caviar; egg yolks; butter; lemon; salt', 'Prepare sabayon, cook tapioca, assemble oysters with caviar on top.', 1),
-('The Black Truffle Explosion', 'Single raviolo filled with hot black truffle liquid.', 'Pasta dough; black truffles; butter; veal stock; Parmesan; salt', 'Prepare ravioli, infuse liquid center with truffle oil, seal, cook briefly.', 1),
-('Sound of the Sea', 'Sashimi and tapioca sand served with sea aroma elements.', 'Fresh sashimi; tapioca; herbs; seaweed; citrus', 'Assemble sashimi, prepare tapioca sand, plate with sea aroma elements.', 1),
-('Risotto Cremoso con Esencia de Trufa', 'Creamy risotto flavored with truffle oil and Parmesan.', 'Arborio rice; chicken stock; white wine; butter; Parmesan; truffle oil', 'Make soffrito, toast rice, add stock gradually, finish with butter, cheese and truffle oil.', 0),
-('Ensalada de Vegetales Asados - Gargouillou', 'A vibrant roasted vegetable salad with herb vinaigrette.', 'Assorted vegetables; olive oil; herbs; vinegar; salt; pepper', 'Roast vegetables, toss with herb vinaigrette, serve warm or room temperature.', 0)
-;
-b
 -- Crear la base de datos
-CREATE DATABASE ArizaDelicias CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE DATABASE blog_recetas CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
-USE ArizaDelicias;
+USE blog_recetas;
 
--- crear la tabla de recetas_con_estrella_michelin
-CREATE TABLE recetas_con_estrella_michelin (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(255) NOT NULL,
-    descripcion TEXT,
-    ingredientes TEXT,
-    instrucciones TEXT,
-    estrella_michelin BOOLEAN DEFAULT TRUE,
+-- Crear la tabla de recetas
+CREATE TABLE recetas (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(200) NOT NULL,
+    ingredientes TEXT NOT NULL,
+    instrucciones TEXT NOT NULL,
+    tiempo_preparacion INT NOT NULL,
+    imagen_url VARCHAR(500),
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
---insertar datos
-INSERT INTO recetas_con_estrella_michelin (nombre, descripcion, ingredientes, instrucciones) VALUES
-('Oysters and Pearls', 'A sabayon of pearl tapioca with Island Creek oysters and white sturgeon caviar.', 'Oysters; pearl tapioca; sturgeon caviar; egg yolks; butter; lemon; salt', 'Prepare sabayon, cook tapioca, assemble oysters with caviar on top.'),
-('The Black Truffle Explosion', 'Single raviolo filled with hot black truffle liquid.', 'Pasta dough; black truffles; butter; veal stock; Parmesan; salt', 'Prepare ravioli, infuse liquid center with truffle oil, seal, cook briefly.'),
-('Sound of the Sea', 'Sashimi and tapioca sand served with sea aroma elements.', 'Fresh sashimi; tapioca; herbs; seaweed; citrus', 'Assemble sashimi, prepare tapioca sand, plate with sea aroma elements.');
-('Risotto Cremoso con Esencia de Trufa', 'Creamy risotto flavored with truffle oil and Parmesan.', 'Arborio rice; chicken stock; white wine; butter; Parmesan; truffle oil', 'Make soffrito, toast rice, add stock gradually, finish with butter, cheese and truffle oil.'),
-('Ensalada de Vegetales Asados - Gargouillou', 'A vibrant roasted vegetable salad with herb vinaigrette.', 'Assorted vegetables; olive oil; herbs; vinegar; salt; pepper', 'Roast vegetables, toss with herb vinaigrette, serve warm or room temperature.');
+
+-- Insertar datos de ejemplo
+INSERT INTO recetas (titulo, ingredientes, instrucciones, tiempo_preparacion, imagen_url) VALUES
+('Tarta de Manzana', 'Manzanas, Harina, Azúcar, Mantequilla, Huevos', '1. Precalentar el horno a 180°C. 2. Preparar la masa...','60','http://example.com/tarta_manzana.jpg'),
+('Ensalada César', 'Lechuga, Pollo, Queso Parmesano, Crutones, Aderezo César', '1. Lavar y cortar la lechuga...','20','http://example.com/ensalada_cesar.jpg');
+('Spaghetti Carbonara', 'Spaghetti, Huevos, Queso Pecorino, Panceta, Pimienta Negra', '1. Cocinar el spaghetti...','30','http://example.com/spaghetti_carbonara.jpg'),
+('Guacamole', 'Aguacates, Cebolla, Tomate, Cilantro, Jugo de Limón', '1. Machacar los aguacates...','10','http://example.com/guacamole.jpg');
