@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -41,10 +41,8 @@
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <header class="flex flex-col sm:flex-row justify-between items-center mb-8">
       <nav class="flex items-center space-x-2 sm:space-x-4 mb-4 sm:mb-0">
-        <!-- Inicio ahora tiene id para resetear filtros -->
         <a id="homeNav" class="px-3 py-2 text-sm font-medium rounded-md bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark" href="#">Inicio</a>
         <a class="px-3 py-2 text-sm font-medium rounded-md hover:bg-surface-light dark:hover:bg-surface-dark" href="#categorias">Categorías</a>
-        <!-- Favoritos con aria-pressed para estado accesible -->
         <a id="favToggle" aria-pressed="false" class="px-3 py-2 text-sm font-medium rounded-md hover:bg-surface-light dark:hover:bg-surface-dark cursor-pointer" href="#">Favoritos</a>
       </nav>
 
@@ -58,7 +56,7 @@
 
     <main>
       <div class="flex justify-between items-center mb-4">
-        <h1 class="text-4xl font-bold text-text-light dark:text-text-dark">Título</h1>
+        <h1 class="text-4xl font-bold text-text-light dark:text-text-dark">Recetas</h1>
         <button id="filtersBtn" class="flex items-center space-x-2 px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-md text-sm font-medium hover:bg-surface-light dark:hover:bg-surface-dark">
           <span class="material-icons text-base">filter_list</span>
           <span>Filtros</span>
@@ -81,445 +79,354 @@
       <div class="mb-8">
         <h2 class="text-2xl font-semibold mb-4">Recetas</h2>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" tabindex="-1">
-          <!-- Pesto -->
-          <a href="pesto.html" class="block group" data-cat="italiana,rapida,vegetariana" data-id="pesto" data-time="15" data-diff="facil" data-servings="2">
-            <figure class="relative w-full h-48 bg-gray-200 dark:bg-gray-800 overflow-hidden rounded-xl">
-              <button type="button" class="fav-btn absolute top-2 right-2 z-10 rounded-full bg-black/50 text-white p-1 hover:bg-black/70" aria-pressed="false" aria-label="Agregar a favoritos">
-                <span class="material-icons text-xl">favorite_border</span>
-              </button>
-              <img src="https://www.lavanguardia.com/files/image_948_465/uploads/2020/05/29/5ed11fb61d750.jpeg" alt="Pasta al pesto con albahaca" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-[1.03]" width="800" height="533" loading="lazy" />
-            </figure>
-            <div class="p-4">
-              <h3 class="text-lg font-semibold">Pasta al pesto</h3>
-              <p class="text-text-secondary-light dark:text-text-secondary-dark">Lista en 15 minutos con albahaca y parmesano.</p>
-              <div class="mt-2 flex flex-wrap gap-2 text-xs text-text-secondary-light dark:text-text-secondary-dark">
-                <span class="px-2 py-0.5 rounded-full border border-gray-300 dark:border-gray-600">Italiana</span>
-                <span class="px-2 py-0.5 rounded-full border border-gray-300 dark:border-gray-600">Rápida</span>
-                <span class="px-2 py-0.5 rounded-full border border-gray-300 dark:border-gray-600">Vegetariana</span>
-              </div>
-            </div>
-          </a>
-
-          <!-- Tacos -->
-          <a href="tacos.html" class="block group" data-cat="mexicana,rapida,pollo" data-id="tacos" data-time="20" data-diff="facil" data-servings="3">
-            <figure class="relative w-full h-48 bg-gray-200 dark:bg-gray-800 overflow-hidden rounded-xl">
-              <button type="button" class="fav-btn absolute top-2 right-2 z-10 rounded-full bg-black/50 text-white p-1 hover:bg-black/70" aria-pressed="false" aria-label="Agregar a favoritos">
-                <span class="material-icons text-xl">favorite_border</span>
-              </button>
-              <img src="https://cdn.colombia.com/gastronomia/2018/11/30/tacos-de-pollo-3391.webp" alt="Tacos de pollo con salsa" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-[1.03]" width="800" height="533" loading="lazy" />
-            </figure>
-            <div class="p-4">
-              <h3 class="text-lg font-semibold">Tacos de pollo</h3>
-              <p class="text-text-secondary-light dark:text-text-secondary-dark">Sazonados con lima y especias, perfectos para compartir.</p>
-              <div class="mt-2 flex flex-wrap gap-2 text-xs text-text-secondary-light dark:text-text-secondary-dark">
-                <span class="px-2 py-0.5 rounded-full border border-gray-300 dark:border-gray-600">Mexicana</span>
-                <span class="px-2 py-0.5 rounded-full border border-gray-300 dark:border-gray-600">Rápida</span>
-                <span class="px-2 py-0.5 rounded-full border border-gray-300 dark:border-gray-600">Pollo</span>
-              </div>
-            </div>
-          </a>
-
-          <!-- Brownies -->
-          <a href="brownie.html" class="block group" data-cat="postre,horneado,chocolate" data-id="brownies" data-time="35" data-diff="media" data-servings="8">
-            <figure class="relative w-full h-48 bg-gray-200 dark:bg-gray-800 overflow-hidden rounded-xl">
-              <button type="button" class="fav-btn absolute top-2 right-2 z-10 rounded-full bg-black/50 text-white p-1 hover:bg-black/70" aria-pressed="false" aria-label="Agregar a favoritos">
-                <span class="material-icons text-xl">favorite_border</span>
-              </button>
-              <img src="https://recetasdecocina.elmundo.es/wp-content/uploads/2016/11/brownie-de-chocolate.jpg" alt="Brownies de chocolate recién horneados" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-[1.03]" width="800" height="533" loading="lazy" />
-            </figure>
-            <div class="p-4">
-              <h3 class="text-lg font-semibold">Brownies clásicos</h3>
-              <p class="text-text-secondary-light dark:text-text-secondary-dark">Extra húmedos y con intenso sabor a cacao.</p>
-              <div class="mt-2 flex flex-wrap gap-2 text-xs text-text-secondary-light dark:text-text-secondary-dark">
-                <span class="px-2 py-0.5 rounded-full border border-gray-300 dark:border-gray-600">Postre</span>
-                <span class="px-2 py-0.5 rounded-full border border-gray-300 dark:border-gray-600">Horneado</span>
-                <span class="px-2 py-0.5 rounded-full border border-gray-300 dark:border-gray-600">Chocolate</span>
-              </div>
-            </div>
-          </a>
-
-          <!-- Paella -->
-          <a href="paella.html" class="block group" data-cat="espanola,arroz,mariscos" data-id="paella" data-time="40" data-diff="media" data-servings="6">
-            <figure class="relative w-full h-48 bg-gray-200 dark:bg-gray-800 overflow-hidden rounded-xl">
-              <button type="button" class="fav-btn absolute top-2 right-2 z-10 rounded-full bg-black/50 text-white p-1 hover:bg-black/70" aria-pressed="false" aria-label="Agregar a favoritos">
-                <span class="material-icons text-xl">favorite_border</span>
-              </button>
-              <img src="https://imag.bonviveur.com/paella-de-pollo.webp" alt="Paella con mariscos" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-[1.03]" width="800" height="533" loading="lazy" />
-            </figure>
-            <div class="p-4">
-              <h3 class="text-lg font-semibold">Paella</h3>
-              <p class="text-text-secondary-light dark:text-text-secondary-dark">Arroz sabroso con mariscos y azafrán.</p>
-              <div class="mt-2 flex flex-wrap gap-2 text-xs text-text-secondary-light dark:text-text-secondary-dark">
-                <span class="px-2 py-0.5 rounded-full border border-gray-300 dark:border-gray-600">Española</span>
-                <span class="px-2 py-0.5 rounded-full border border-gray-300 dark:border-gray-600">Arroz</span>
-                <span class="px-2 py-0.5 rounded-full border border-gray-300 dark:border-gray-600">Mariscos</span>
-              </div>
-            </div>
-          </a>
+        <!-- CONTENEDOR DINÁMICO -->
+        <div id="lista-recetas" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" tabindex="-1">
+          <!-- Se llenará con Fetch desde la API -->
         </div>
       </div>
 
       <!-- Valoración y Comentarios -->
-      <section class="mt-12" id="reviews">
-        <h2 class="text-2xl font-semibold mb-6">Valoración y Comentarios</h2>
+<section class="mt-12" id="reviews">
+  <h2 class="text-2xl font-semibold mb-6">Valoración y Comentarios</h2>
 
-        <div id="comment-list" class="space-y-6">
-          <div class="flex space-x-4">
-            <img alt="Jeff Bezos profile picture" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDoEoZ-c8VrKOhX6rVgXPkSuf7ZQS58MHos73hkqDt-ZVSb3fjVWwWTLwRtt_al_vMJIK-BmMcYwbwmTSSZB0Cwcis7p_vPGhposmfcxtXLbCSJtsJ3ZOvrifZfNi_9m3CcKlIBwJtDxccfWpdlqLpD312FeDZPjW0Ui4j_u_aPQXDh8dt-HNRUH4Bm97ElzDkyVQXVgMP7jPbfGfjmpTGotVYmQem8oWRacKwao2mcwi2damLrSYy6MKokdnwnA63eoH8RITluX0"/>
-            <div class="flex-1">
-              <div class="flex items-baseline space-x-2">
-                <h4 class="font-semibold text-text-light dark:text-text-dark">Jeff Bezos</h4>
-                <div class="flex text-primary">
-                  <span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span>
-                </div>
-              </div>
-              <p class="text-text-secondary-light dark:text-text-secondary-dark mt-1">Creo que este va ser el mejor proyecto, vas a ser...</p>
-            </div>
-          </div>
-
-          <div class="flex space-x-4">
-            <img alt="Bill Gates profile picture" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS34FfJ6Wm8eSkp7_FtEgUsqzUNlaekp0afEdoAMtU8Wkl2UZbY2sqhH-cBWLN9DVoLr0-y6FAM41gHCYl6PrqTcDhsPamXhVWxW37oPcDmlteVQF_3F3PXw7fjpeatrHIeAJYx6n4hZHzag1R_NMoZP7knuh30seoc1NMEQ-4WzqceWDV3NkCVH1mqP8r-3b3rZBqvV6YHORuhcM0dNgDVK924ryn1CxOAhLd54cdGucMX_Dp1WuaveA0aEW94e7z7EJjbunc1Vc"/>
-            <div class="flex-1">
-              <div class="flex items-baseline space-x-2">
-                <h4 class="font-semibold text-text-light dark:text-text-dark">Maluma boy</h4>
-                <div class="flex text-primary">
-                  <span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star_border</span>
-                </div>
-              </div>
-              <p class="text-text-secondary-light dark:text-text-secondary-dark mt-1">Que buena receta bro, espero que sea la ultima :)</p>
-            </div>
+  <div id="comment-list" class="space-y-6">
+    <div class="flex space-x-4">
+      <img alt="Jeff Bezos profile picture" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDoEoZ-c8VrKOhX6rVgXPkSuf7ZQS58MHos73hkqDt-ZVSb3fjVWwWTLwRtt_al_vMJIK-BmMcYwbwmTSSZB0Cwcis7p_vPGhposmfcxtXLbCSJtsJ3ZOvrifZfNi_9m3CcKlIBwJtDxccfWpdlqLpD312FeDZPjW0Ui4j_u_aPQXDh8dt-HNRUH4Bm97ElzDkyVQXVgMP7jPbfGfjmpTGotVYmQem8oWRacKwao2mcwi2damLrSYy6MKokdnwnA63eoH8RITluX0"/>
+      <div class="flex-1">
+        <div class="flex items-baseline space-x-2">
+          <h4 class="font-semibold text-text-light dark:text-text-dark">Jeff Bezos</h4>
+          <div class="flex text-primary">
+            <span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span>
           </div>
         </div>
+        <p class="text-text-secondary-light dark:text-text-secondary-dark mt-1">Creo que este va ser el mejor proyecto, vas a ser...</p>
+      </div>
+    </div>
 
-        <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
-          <h3 class="text-lg font-medium mb-4">Deja tu comentario</h3>
-          <form id="comment-form" class="space-y-4">
-            <div>
-              <label class="block text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark mb-1" for="name">Tu nombre</label>
-              <input id="name" name="name" type="text" required maxlength="40"
-                     class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-background-light dark:bg-surface-dark focus:ring-primary focus:border-primary"
-                     placeholder="Escribe tu nombre..." />
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark mb-1" for="rating">Tu valoración</label>
-              <div id="stars" class="flex space-x-1 text-gray-400 select-none" role="radiogroup" aria-label="Valoración">
-                <button type="button" class="star" data-value="1"><span class="material-icons text-2xl">star_border</span></button>
-                <button type="button" class="star" data-value="2"><span class="material-icons text-2xl">star_border</span></button>
-                <button type="button" class="star" data-value="3"><span class="material-icons text-2xl">star_border</span></button>
-                <button type="button" class="star" data-value="4"><span class="material-icons text-2xl">star_border</span></button>
-                <button type="button" class="star" data-value="5"><span class="material-icons text-2xl">star_border</span></button>
-              </div>
-              <input type="hidden" id="rating" name="rating" required />
-            </div>
-
-            <div>
-              <label class="sr-only" for="comment">Comentario</label>
-              <textarea id="comment" name="comment" required minlength="3" rows="4"
-                        class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-background-light dark:bg-surface-dark focus:ring-primary focus:border-primary"
-                        placeholder="Escribe tu comentario..."></textarea>
-            </div>
-
-            <div class="flex justify-end">
-              <button class="bg-primary text-white px-6 py-2 rounded-md font-semibold hover:bg-opacity-90 transition-colors" type="submit">Enviar</button>
-            </div>
-          </form>
+    <div class="flex space-x-4">
+      <img alt="Bill Gates profile picture" class="w-10 h-10 rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS34FfJ6Wm8eSkp7_FtEgUsqzUNlaekp0afEdoAMtU8Wkl2UZbY2sqhH-cBWLN9DVoLr0-y6FAM41gHCYl6PrqTcDhsPamXhVWxW37oPcDmlteVQF_3F3PXw7fjpeatrHIeAJYx6n4hZHzag1R_NMoZP7knuh30seoc1NMEQ-4WzqceWDV3NkCVH1mqP8r-3b3rZBqvV6YHORuhcM0dNgDVK924ryn1CxOAhLd54cdGucMX_Dp1WuaveA0aEW94e7z7EJjbunc1Vc"/>
+      <div class="flex-1">
+        <div class="flex items-baseline space-x-2">
+          <h4 class="font-semibold text-text-light dark:text-text-dark">Maluma boy</h4>
+          <div class="flex text-primary">
+            <span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star</span><span class="material-icons text-sm">star_border</span>
+          </div>
         </div>
+        <p class="text-text-secondary-light dark:text-text-secondary-dark mt-1">Que buena receta bro, espero que sea la ultima :)</p>
+      </div>
+    </div>
+  </div>
 
-        <!-- Diálogo de filtros -->
-        <dialog id="filtersDialog" class="rounded-2xl p-0 w-[92vw] max-w-xl bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark">
-          <form method="dialog">
-            <header class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-700">
-              <h3 class="text-lg font-semibold">Filtros</h3>
-              <button class="material-icons text-xl" value="close" aria-label="Cerrar">close</button>
-            </header>
+  <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+    <h3 class="text-lg font-medium mb-4">Deja tu comentario</h3>
+    <form id="comment-form" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark mb-1" for="name">Tu nombre</label>
+        <input id="name" name="name" type="text" required maxlength="40"
+               class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-background-light dark:bg-surface-dark focus:ring-primary focus:border-primary"
+               placeholder="Escribe tu nombre..." />
+      </div>
 
-            <div class="px-4 py-4 space-y-5">
-              <fieldset class="space-y-2">
-                <legend class="text-sm font-medium">Tiempo máximo (min)</legend>
-                <input id="fltTime" type="range" min="0" max="120" step="5" value="0" class="w-full" />
-                <div class="text-sm text-text-secondary-light dark:text-text-secondary-dark"><span id="fltTimeVal">Sin límite</span></div>
-              </fieldset>
+      <div>
+        <label class="block text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark mb-1" for="rating">Tu valoración</label>
+        <div id="stars" class="flex space-x-1 text-gray-400 select-none" role="radiogroup" aria-label="Valoración">
+          <button type="button" class="star" data-value="1"><span class="material-icons text-2xl">star_border</span></button>
+          <button type="button" class="star" data-value="2"><span class="material-icons text-2xl">star_border</span></button>
+          <button type="button" class="star" data-value="3"><span class="material-icons text-2xl">star_border</span></button>
+          <button type="button" class="star" data-value="4"><span class="material-icons text-2xl">star_border</span></button>
+          <button type="button" class="star" data-value="5"><span class="material-icons text-2xl">star_border</span></button>
+        </div>
+        <input type="hidden" id="rating" name="rating" required />
+      </div>
 
-              <fieldset class="space-y-2">
-                <legend class="text-sm font-medium">Dificultad</legend>
-                <div class="flex flex-wrap gap-3 text-sm">
-                  <label class="inline-flex items-center gap-2"><input type="checkbox" class="fltDiff" value="facil" /> Fácil</label>
-                  <label class="inline-flex items-center gap-2"><input type="checkbox" class="fltDiff" value="media" /> Media</label>
-                  <label class="inline-flex items-center gap-2"><input type="checkbox" class="fltDiff" value="dificil" /> Difícil</label>
-                </div>
-              </fieldset>
+      <div>
+        <label class="sr-only" for="comment">Comentario</label>
+        <textarea id="comment" name="comment" required minlength="3" rows="4"
+                  class="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md bg-background-light dark:bg-surface-dark focus:ring-primary focus:border-primary"
+                  placeholder="Escribe tu comentario..."></textarea>
+      </div>
 
-              <fieldset class="space-y-2">
-                <legend class="text-sm font-medium">Porciones mínimas</legend>
-                <input id="fltServings" type="range" min="1" max="10" step="1" value="1" class="w-full" />
-                <div class="text-sm text-text-secondary-light dark:text-text-secondary-dark"><span id="fltServingsVal">1</span> porción(es)</div>
-              </fieldset>
-            </div>
+      <div class="flex justify-end">
+        <button class="bg-primary text-white px-6 py-2 rounded-md font-semibold hover:bg-opacity-90 transition-colors" type="submit">Enviar</button>
+      </div>
+    </form>
+  </div>
 
-            <footer class="flex items-center justify-end gap-3 px-4 py-3 border-t border-gray-200 dark:border-gray-700">
-              <button id="fltClear" class="px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 hover:bg-surface-light dark:hover:bg-surface-dark" value="close">Limpiar</button>
-              <button id="fltApply" class="px-4 py-2 rounded-md bg-primary text-black font-semibold hover:brightness-110" value="close">Aplicar</button>
-            </footer>
-          </form>
-        </dialog>
-      </section>
+  <!-- Diálogo de filtros -->
+  <dialog id="filtersDialog" class="rounded-2xl p-0 w-[92vw] max-w-xl bg-surface-light dark:bg-surface-dark text-text-light dark:text-text-dark">
+    <form method="dialog">
+      <header class="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-700">
+        <h3 class="text-lg font-semibold">Filtros</h3>
+        <button class="material-icons text-xl" value="close" aria-label="Cerrar">close</button>
+      </header>
+
+      <div class="px-4 py-4 space-y-5">
+        <fieldset class="space-y-2">
+          <legend class="text-sm font-medium">Tiempo máximo (min)</legend>
+          <input id="fltTime" type="range" min="0" max="120" step="5" value="0" class="w-full" />
+          <div class="text-sm text-text-secondary-light dark:text-text-secondary-dark">
+            <span id="fltTimeVal">Sin límite</span>
+          </div>
+        </fieldset>
+
+        <fieldset class="space-y-2">
+          <legend class="text-sm font-medium">Dificultad</legend>
+          <div class="flex flex-wrap gap-3 text-sm">
+            <label class="inline-flex items-center gap-2">
+              <input type="checkbox" class="fltDiff" value="facil" /> Fácil
+            </label>
+            <label class="inline-flex items-center gap-2">
+              <input type="checkbox" class="fltDiff" value="media" /> Media
+            </label>
+            <label class="inline-flex items-center gap-2">
+              <input type="checkbox" class="fltDiff" value="dificil" /> Difícil
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="space-y-2">
+          <legend class="text-sm font-medium">Porciones mínimas</legend>
+          <input id="fltServings" type="range" min="1" max="10" step="1" value="1" class="w-full" />
+          <div class="text-sm text-text-secondary-light dark:text-text-secondary-dark">
+            <span id="fltServingsVal">1</span> porción(es)
+          </div>
+        </fieldset>
+      </div>
+
+      <footer class="flex items-center justify-end gap-3 px-4 py-3 border-t border-gray-200 dark:border-gray-700">
+        <button id="fltClear" class="px-4 py-2 rounded-md border border-gray-300 dark:border-gray-600 hover:bg-surface-light dark:hover:bg-surface-dark" value="close">
+          Limpiar
+        </button>
+        <button id="fltApply" class="px-4 py-2 rounded-md bg-primary text-black font-semibold hover:brightness-110" value="close">
+          Aplicar
+        </button>
+      </footer>
+    </form>
+  </dialog>
+</section>
+
     </main>
   </div>
 
-  <!-- Buscador + Filtro + Comentarios + Favoritos + Modal Filtros -->
+  <!-- JS -->
   <script>
     (() => {
+      // URL de tu API (ajusta el puerto/ruta si es diferente)
+      // Por ejemplo, si tu endpoint es GET http://localhost:3000/recetas, cambia a esa URL
+      const API_URL = 'http://localhost:3000/api/recetas';
+
       // ---------- Elementos base ----------
       const q = document.getElementById('search');
-      const grid = document.querySelector('.grid');
-      const cards = Array.from(grid.querySelectorAll(':scope > a'));
+      const grid = document.getElementById('lista-recetas');
       const chips = Array.from(document.querySelectorAll('.cat-chip'));
       const favToggle = document.getElementById('favToggle');
       const homeNav = document.getElementById('homeNav');
 
+      let cards = [];
       let activeCat = '*';
       let onlyFav = false;
 
-      // ---------- Favoritos ----------
-      const FAV_KEY = 'fav-recipes';
-      const loadFavs = () => { try { return new Set(JSON.parse(localStorage.getItem(FAV_KEY) || '[]')); } catch { return new Set(); } };
-      const saveFavs = (set) => localStorage.setItem(FAV_KEY, JSON.stringify([...set]));
-      const favs = loadFavs();
+      // ---------- Cargar recetas desde la API ----------
+      async function cargarRecetasDesdeAPI() {
+        grid.innerHTML = '<p class="text-text-secondary-light dark:text-text-secondary-dark">Cargando recetas...</p>';
 
-      const setFavUI = (card, isFav) => {
-        const btn = card.querySelector('.fav-btn');
-        const icon = btn.querySelector('.material-icons');
-        btn.setAttribute('aria-pressed', isFav ? 'true' : 'false');
-        icon.textContent = isFav ? 'favorite' : 'favorite_border';
-        btn.classList.toggle('bg-red-600', isFav);
-        btn.classList.toggle('bg-black/50', !isFav);
-      };
+        try {
+          const res = await fetch(API_URL);
+          const json = await res.json();      // { success: true, data: [...] }
+          const recetas = json.data || [];
 
-      cards.forEach(card => {
-        const id = card.dataset.id;
-        const btn = card.querySelector('.fav-btn');
-        setFavUI(card, favs.has(id));
-        btn.addEventListener('click', (e) => {
-          e.preventDefault(); e.stopPropagation();
-          if (favs.has(id)) favs.delete(id); else favs.add(id);
-          saveFavs(favs);
-          setFavUI(card, favs.has(id));
-          apply();
-        });
-      });
+          grid.innerHTML = '';
 
-      // ---------- Dialog y controles de Filtros ----------
-      const dlg = document.getElementById('filtersDialog');
-      const filtersBtn = document.getElementById('filtersBtn');
-      const fltTime = document.getElementById('fltTime');
-      const fltTimeVal = document.getElementById('fltTimeVal');
-      const fltServ = document.getElementById('fltServings');
-      const fltServVal = document.getElementById('fltServingsVal');
-      const fltDiffs = Array.from(document.querySelectorAll('.fltDiff'));
+          recetas.forEach((receta) => {
+            const card = document.createElement('a');
 
-      filtersBtn.addEventListener('click', () => dlg.showModal()); // showModal [web:585]
-      dlg.addEventListener('close', () => apply()); // close event [web:584]
+            // mapear título a página de detalle
+            const tituloLower = receta.titulo.toLowerCase();
+            let href = '#';
+            if (tituloLower.includes('pesto')) href = 'pesto.html';
+            else if (tituloLower.includes('tacos')) href = 'tacos.html';
+            else if (tituloLower.includes('brownie')) href = 'brownie.html';
+            else if (tituloLower.includes('paella')) href = 'paella.html';
 
-      const updateLabels = () => {
-        fltTimeVal.textContent = fltTime.value === '0' ? 'Sin límite' : `${fltTime.value} min`;
-        fltServVal.textContent = fltServ.value;
-      };
-      ['input','change'].forEach(e => { fltTime.addEventListener(e, updateLabels); fltServ.addEventListener(e, updateLabels); });
-      updateLabels();
+            card.href = href;
+            card.className = 'block group';
+            card.dataset.id = tituloLower.replace(/\s+/g, '');
+            card.dataset.time = receta.tiempo_preparacion || 0;
+            card.dataset.servings = receta.porciones || 1;
+            // categorías básicas según título
+            if (tituloLower.includes('pesto')) card.dataset.cat = 'italiana,rapida,vegetariana';
+            else if (tituloLower.includes('tacos')) card.dataset.cat = 'mexicana,rapida,pollo';
+            else if (tituloLower.includes('brownie')) card.dataset.cat = 'postre,horneado,chocolate';
+            else if (tituloLower.includes('paella')) card.dataset.cat = 'espanola,arroz,mariscos';
+            else card.dataset.cat = 'receta';
 
-      document.getElementById('fltClear').addEventListener('click', () => {
-        fltTime.value = '0';
-        fltServ.value = '1';
-        fltDiffs.forEach(cb => cb.checked = false);
-        updateLabels();
-      });
-      document.getElementById('fltApply').addEventListener('click', () => { /* se cierra y en 'close' aplicamos */ });
+            card.dataset.diff = 'facil';
 
-      // ---------- Filtros combinados ----------
-      const text = (el) => (el?.textContent || '').toLowerCase();
-      const inCat = (card, cat) => {
-        if (cat === '*') return true;
-        const cats = (card.dataset.cat || '').toLowerCase().split(',').map(s => s.trim());
-        return cats.includes(cat);
-      };
-      const inFav = (card) => !onlyFav || favs.has(card.dataset.id);
+            card.innerHTML = `
+              <figure class="relative w-full h-48 bg-gray-200 dark:bg-gray-800 overflow-hidden rounded-xl">
+                <button type="button" class="fav-btn absolute top-2 right-2 z-10 rounded-full bg-black/50 text-white p-1 hover:bg-black/70" aria-pressed="false" aria-label="Agregar a favoritos">
+                  <span class="material-icons text-xl">favorite_border</span>
+                </button>
+                <img src="${receta.imagen}" alt="${receta.titulo}" class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-[1.03]" loading="lazy" />
+              </figure>
+              <div class="p-4">
+                <h3 class="text-lg font-semibold">${receta.titulo}</h3>
+                <p class="text-text-secondary-light dark:text-text-secondary-dark">
+                  ${receta.descripcion}
+                </p>
+                <div class="mt-2 flex flex-wrap gap-2 text-xs text-text-secondary-light dark:text-text-secondary-dark">
+                  <span class="px-2 py-0.5 rounded-full border border-gray-300 dark:border-gray-600">
+                    ⏱ ${receta.tiempo_preparacion || '-'} min
+                  </span>
+                  <span class="px-2 py-0.5 rounded-full border border-gray-300 dark:border-gray-600">
+                    🍽 ${receta.porciones || '-'} porciones
+                  </span>
+                </div>
+              </div>
+            `;
 
-      const matchTime = (card) => {
-        const t = Number(card.dataset.time || 0);
-        const max = Number(fltTime.value || 0);
-        return max === 0 || (t > 0 && t <= max);
-      };
-      const matchDiff = (card) => {
-        const selected = fltDiffs.filter(cb => cb.checked).map(cb => cb.value);
-        if (selected.length === 0) return true;
-        const d = (card.dataset.diff || '').toLowerCase();
-        return selected.includes(d);
-      };
-      const matchServ = (card) => {
-        const s = Number(card.dataset.servings || 1);
-        const min = Number(fltServ.value || 1);
-        return s >= min;
-      };
+            grid.appendChild(card);
+          });
 
-      const apply = () => {
-        const term = (q?.value || '').toLowerCase().trim();
+          cards = Array.from(grid.querySelectorAll(':scope > a'));
+          inicializarFavoritosYFiltros(); // una vez que existen las cards
+        } catch (err) {
+          console.error(err);
+          grid.innerHTML = '<p class="text-red-500">Error al cargar recetas</p>';
+        }
+      }
+
+      // ---------- Favoritos y filtros (adaptado de tu script) ----------
+      function inicializarFavoritosYFiltros() {
+        const FAV_KEY = 'fav-recipes';
+        const loadFavs = () => { try { return new Set(JSON.parse(localStorage.getItem(FAV_KEY) || '[]')); } catch { return new Set(); } };
+        const saveFavs = (set) => localStorage.setItem(FAV_KEY, JSON.stringify([...set]));
+        const favs = loadFavs();
+
+        const setFavUI = (card, isFav) => {
+          const btn = card.querySelector('.fav-btn');
+          const icon = btn.querySelector('.material-icons');
+          btn.setAttribute('aria-pressed', isFav ? 'true' : 'false');
+          icon.textContent = isFav ? 'favorite' : 'favorite_border';
+          btn.classList.toggle('bg-red-600', isFav);
+          btn.classList.toggle('bg-black/50', !isFav);
+        };
+
         cards.forEach(card => {
-          const title = text(card.querySelector('h3'));
-          const desc  = text(card.querySelector('p'));
-          const matchText = !term || title.includes(term) || desc.includes(term);
-          const ok = matchText && inCat(card, activeCat) && inFav(card) && matchTime(card) && matchDiff(card) && matchServ(card);
-          card.style.display = ok ? '' : 'none';
+          const id = card.dataset.id;
+          const btn = card.querySelector('.fav-btn');
+          setFavUI(card, favs.has(id));
+          btn.addEventListener('click', (e) => {
+            e.preventDefault(); e.stopPropagation();
+            if (favs.has(id)) favs.delete(id); else favs.add(id);
+            saveFavs(favs);
+            setFavUI(card, favs.has(id));
+            apply();
+          });
         });
-      };
 
-      if (q) ['input','change'].forEach(e => q.addEventListener(e, apply));
-      chips.forEach(btn => {
-        btn.addEventListener('click', () => {
-          activeCat = (btn.dataset.filter || '*').toLowerCase();
-          chips.forEach(c => c.classList.remove('ring-2','ring-primary/50','bg-surface-light','dark:bg-surface-dark'));
-          btn.classList.add('ring-2','ring-primary/50','bg-surface-light','dark:bg-surface-dark');
+        const dlg = document.getElementById('filtersDialog');
+        const filtersBtn = document.getElementById('filtersBtn');
+        const fltTime = document.getElementById('fltTime');
+        const fltTimeVal = document.getElementById('fltTimeVal');
+        const fltServ = document.getElementById('fltServings');
+        const fltServVal = document.getElementById('fltServingsVal');
+        const fltDiffs = Array.from(document.querySelectorAll('.fltDiff'));
+
+        filtersBtn.addEventListener('click', () => dlg.showModal());
+        dlg.addEventListener('close', () => apply());
+
+        const updateLabels = () => {
+          fltTimeVal.textContent = fltTime.value === '0' ? 'Sin límite' : `${fltTime.value} min`;
+          fltServVal.textContent = fltServ.value;
+        };
+        ['input','change'].forEach(e => { fltTime.addEventListener(e, updateLabels); fltServ.addEventListener(e, updateLabels); });
+        updateLabels();
+
+        document.getElementById('fltClear').addEventListener('click', () => {
+          fltTime.value = '0';
+          fltServ.value = '1';
+          fltDiffs.forEach(cb => cb.checked = false);
+          updateLabels();
+        });
+
+        const text = (el) => (el?.textContent || '').toLowerCase();
+        const inCat = (card, cat) => {
+          if (cat === '*') return true;
+          const cats = (card.dataset.cat || '').toLowerCase().split(',').map(s => s.trim());
+          return cats.includes(cat);
+        };
+        const inFav = (card) => !onlyFav || favs.has(card.dataset.id);
+
+        const matchTime = (card) => {
+          const t = Number(card.dataset.time || 0);
+          const max = Number(fltTime.value || 0);
+          return max === 0 || (t > 0 && t <= max);
+        };
+        const matchDiff = (card) => {
+          const selected = fltDiffs.filter(cb => cb.checked).map(cb => cb.value);
+          if (selected.length === 0) return true;
+          const d = (card.dataset.diff || '').toLowerCase();
+          return selected.includes(d);
+        };
+        const matchServ = (card) => {
+          const s = Number(card.dataset.servings || 1);
+          const min = Number(fltServ.value || 1);
+          return s >= min;
+        };
+
+        const apply = () => {
+          const term = (q?.value || '').toLowerCase().trim();
+          cards.forEach(card => {
+            const title = text(card.querySelector('h3'));
+            const desc  = text(card.querySelector('p'));
+            const matchText = !term || title.includes(term) || desc.includes(term);
+            const ok = matchText && inCat(card, activeCat) && inFav(card) && matchTime(card) && matchDiff(card) && matchServ(card);
+            card.style.display = ok ? '' : 'none';
+          });
+        };
+
+        if (q) ['input','change'].forEach(e => q.addEventListener(e, apply));
+        chips.forEach(btn => {
+          btn.addEventListener('click', () => {
+            activeCat = (btn.dataset.filter || '*').toLowerCase();
+            chips.forEach(c => c.classList.remove('ring-2','ring-primary/50','bg-surface-light','dark:bg-surface-dark'));
+            btn.classList.add('ring-2','ring-primary/50','bg-surface-light','dark:bg-surface-dark');
+            apply();
+            grid.setAttribute('tabindex','-1'); grid.focus({preventScroll:true});
+          });
+        });
+
+        const updateFavToggleUI = () => {
+          favToggle.setAttribute('aria-pressed', onlyFav ? 'true' : 'false');
+          favToggle.classList.toggle('bg-surface-light', onlyFav);
+          favToggle.classList.toggle('dark:bg-surface-dark', onlyFav);
+        };
+        favToggle.addEventListener('click', (e) => {
+          e.preventDefault();
+          onlyFav = !onlyFav;
+          updateFavToggleUI();
           apply();
-          grid.setAttribute('tabindex','-1'); grid.focus({preventScroll:true});
         });
-      });
 
-      // Toggle Favoritos accesible (aria-pressed) y visual
-      const updateFavToggleUI = () => {
-        favToggle.setAttribute('aria-pressed', onlyFav ? 'true' : 'false');
-        favToggle.classList.toggle('bg-surface-light', onlyFav);
-        favToggle.classList.toggle('dark:bg-surface-dark', onlyFav);
-      };
-      favToggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        onlyFav = !onlyFav;
+        const resetFilters = () => {
+          onlyFav = false; updateFavToggleUI();
+          if (q) q.value = '';
+          activeCat = '*';
+          fltTime.value = '0'; fltServ.value = '1'; fltDiffs.forEach(cb => cb.checked = false); updateLabels();
+          chips.forEach(c => c.classList.remove('ring-2','ring-primary/50','bg-surface-light','dark:bg-surface-dark'));
+          if (chips[0]) chips[0].classList.add('ring-2','ring-primary/50','bg-surface-light','dark:bg-surface-dark');
+          apply();
+        };
+        homeNav.addEventListener('click', (e) => { e.preventDefault(); resetFilters(); });
+
+        if (chips[0]) chips[0].classList.add('ring-2','ring-primary/50','bg-surface-light','dark:bg-surface-dark');
         updateFavToggleUI();
         apply();
-      });
+      }
 
-      // Inicio: reset total en un solo clic
-      const resetFilters = () => {
-        onlyFav = false; updateFavToggleUI();
-        if (q) q.value = '';
-        activeCat = '*';
-        fltTime.value = '0'; fltServ.value = '1'; fltDiffs.forEach(cb => cb.checked = false); updateLabels();
-        chips.forEach(c => c.classList.remove('ring-2','ring-primary/50','bg-surface-light','dark:bg-surface-dark'));
-        if (chips[0]) chips[0].classList.add('ring-2','ring-primary/50','bg-surface-light','dark:bg-surface-dark');
-        apply();
-      };
-      homeNav.addEventListener('click', (e) => { e.preventDefault(); resetFilters(); });
-
-      // Estado inicial
-      if (chips[0]) chips[0].classList.add('ring-2','ring-primary/50','bg-surface-light','dark:bg-surface-dark');
-      updateFavToggleUI();
-      apply();
-
-      // ---------- Comentarios (con estrellas y eliminar) ----------
-      const LIST_ID = 'comment-list';
-      const FORM_ID = 'comment-form';
-      const STORAGE_KEY = 'home-comments';
-
-      const list = document.getElementById(LIST_ID);
-      const form = document.getElementById(FORM_ID);
-      const ratingInput = document.getElementById('rating');
-      const starBtns = Array.from(document.querySelectorAll('#stars .star'));
-
-      let selected = 0;
-      const paintStars = (n) => {
-        starBtns.forEach((btn, i) => {
-          const icon = btn.querySelector('.material-icons');
-          icon.textContent = (i < n) ? 'star' : 'star_border';
-          icon.classList.toggle('text-primary', i < n);
-        });
-      };
-      starBtns.forEach(btn => {
-        btn.addEventListener('click', () => { selected = Number(btn.dataset.value); ratingInput.value = String(selected); paintStars(selected); });
-        btn.addEventListener('mouseenter', () => paintStars(Number(btn.dataset.value)));
-        btn.addEventListener('mouseleave', () => paintStars(selected));
-      });
-
-      const loadComments = () => {
-        try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); }
-        catch { return []; }
-      };
-      const saveComments = (arr) => localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
-
-      const renderItem = ({ id, name, rating, text, date }) => {
-        const wrap = document.createElement('div');
-        wrap.className = 'flex space-x-4';
-        wrap.dataset.id = id;
-
-        const avatar = document.createElement('div');
-        avatar.className = 'w-10 h-10 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center text-sm font-semibold';
-        avatar.textContent = (name || '?').trim().slice(0,1).toUpperCase();
-
-        const body = document.createElement('div');
-        body.className = 'flex-1';
-
-        const head = document.createElement('div');
-        head.className = 'flex items-start justify-between gap-3';
-
-        const left = document.createElement('div');
-        left.className = 'flex items-baseline space-x-2';
-
-        const h4 = document.createElement('h4');
-        h4.className = 'font-semibold text-text-light dark:text-text-dark';
-        h4.textContent = name || 'Anónimo';
-
-        const starsBox = document.createElement('div');
-        starsBox.className = 'flex text-primary';
-        const n = Math.max(0, Math.min(5, Number(rating) || 0));
-        for (let i=0;i<5;i++){ const s=document.createElement('span'); s.className='material-icons text-sm'; s.textContent = i<n ? 'star':'star_border'; starsBox.appendChild(s); }
-
-        const del = document.createElement('button');
-        del.type = 'button';
-        del.className = 'text-xs px-2 py-1 rounded-md border border-gray-300 dark:border-gray-600 hover:bg-surface-light dark:hover:bg-surface-dark';
-        del.textContent = 'Eliminar';
-        del.setAttribute('aria-label','Eliminar comentario');
-        del.addEventListener('click', () => {
-          wrap.remove();
-          const arr = loadComments();
-          saveComments(arr.filter(x => x.id !== id));
-        });
-
-        left.appendChild(h4);
-        left.appendChild(starsBox);
-        head.appendChild(left);
-        head.appendChild(del);
-
-        const p = document.createElement('p');
-        p.className = 'text-text-secondary-light dark:text-text-secondary-dark mt-1';
-        p.textContent = text;
-
-        const small = document.createElement('p');
-        small.className = 'text-xs text-text-secondary-light dark:text-text-secondary-dark mt-1';
-        small.textContent = new Date(date).toLocaleString();
-
-        body.appendChild(head);
-        body.appendChild(p);
-        body.appendChild(small);
-
-        wrap.appendChild(avatar);
-        wrap.appendChild(body);
-        return wrap;
-      };
-
-      let data = loadComments().map(o => o.id ? o : { ...o, id: String(o.date || Date.now()) });
-      saveComments(data);
-      data.forEach(item => list.appendChild(renderItem(item)));
-
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        if (!form.reportValidity()) return;
-        const name = (document.getElementById('name').value || 'Anónimo').trim();
-        const textVal = (document.getElementById('comment').value || '').trim();
-        const rating = Number(ratingInput.value || 0);
-        const item = { id: (crypto.randomUUID ? crypto.randomUUID() : String(Date.now())), name, text: textVal, rating, date: Date.now() };
-        list.appendChild(renderItem(item));
-        data = loadComments(); data.push(item); saveComments(data);
-        form.reset(); selected = 0; paintStars(0);
-      });
+      // Llamar a la API al cargar
+      document.addEventListener('DOMContentLoaded', cargarRecetasDesdeAPI);
     })();
   </script>
 </body>
