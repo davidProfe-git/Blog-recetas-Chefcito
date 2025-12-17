@@ -1,13 +1,14 @@
-const DataBase = require('mysql2')
+const mysql = require('mysql2')
 require('dotenv').config()
 
-const coneccion = DataBase.createPool({
-    host: ProcessingInstruction.env.HOST,
-    host: ProcessingInstruction.env.USER,
-    password: process.env.PASSWORD, 
-    database: process.env.DB_NAME
-    
-}) 
-const conection = coneccion.promise()
+const conexion = mysql.createPool({
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'blog_recetas',
+  port: 3307
+})
 
-module.exports = conection 
+const conexionPromise = conexion.promise()
+
+module.exports = conexionPromise

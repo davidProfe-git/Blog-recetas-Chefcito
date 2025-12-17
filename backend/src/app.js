@@ -4,16 +4,20 @@ require('dotenv').config()
 const cors = require('cors')
 const router = require('./routes/recetasRouter')
 
+// Puerto desde .env o 3000 por defecto
+const PORT = process.env.PORT || 3000
 
+// Middlewares
 app.use(cors())
-app.use('/api/recetas',router)
+app.use(express.json())          // <-- para req.body
+app.use('/api/recetas', router)
 
-
-
-app.get('/',(request,reponse)=>{
-  reponse.json({mensaje : "funciona mi api"})
+// Ruta de prueba
+app.get('/', (request, response) => {
+  response.json({ mensaje: 'funciona mi api' })
 })
 
-app.listen(PORT, ()=>{
+// Arranque del servidor
+app.listen(PORT, () => {
   console.log(`arranco el servidor ${PORT}`)
 })

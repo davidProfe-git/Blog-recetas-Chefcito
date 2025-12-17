@@ -1,15 +1,21 @@
 const RecetaModel = require('../models/recetaModel')
 
-class RecetaController{
-//funcion que trae las recetas y las responde en JSON
-    static async obtenerRecetas(request, response){
-        const recetas = await RecetaModel.obtenerRecetas()
-        response.json({
-            success: true,
-            data: recetas
-        })
-
+class RecetaController {
+  static async obtenerRecetas(request, response) {
+    try {
+      const recetas = await RecetaModel.obtenerRecetas()
+      response.json({
+        success: true,
+        data: recetas
+      })
+    } catch (error) {
+      console.error(error)
+      response.status(500).json({
+        success: false,
+        message: 'Error al obtener recetas'
+      })
     }
+  }
 }
 
 module.exports = RecetaController

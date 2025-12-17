@@ -1,7 +1,7 @@
+const express = require('express')
 const RecetaController = require('../controllers/recetaController')
-const EXPRESS = require('express')
-const ROUTER = EXPRESS.Router()
+const router = express.Router()
 
-ROUTER.get('/',RecetaController.obtenerRecetas)
+router.get('/', RecetaController.obtenerRecetas)
 
-module.exports = ROUTER
+module.exports = router
